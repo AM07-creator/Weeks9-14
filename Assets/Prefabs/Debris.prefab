@@ -191,6 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5324293753831780921}
+  - component: {fileID: 5723510169602057415}
   m_Layer: 0
   m_Name: Debris
   m_TagString: Untagged
@@ -221,6 +222,19 @@ Transform:
   - {fileID: 8620678539138748784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5723510169602057415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805017403174604445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b82a7a55f5a9094192ac158d5ae520b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Debris
+  speed: 15
 --- !u!1 &2135115388744197449
 GameObject:
   m_ObjectHideFlags: 0
