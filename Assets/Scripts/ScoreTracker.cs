@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class ScoreTracker : MonoBehaviour
 {
-//Declare timerText TextMeshPro variable and scoreTime float;
+//Declare timerText TextMeshPro variable and scoreTime float, as well as storing the coroutine's reference
 	public TextMeshProUGUI timerText;
 	public float scoreTime = 0f;
+	Coroutine scoreRoutine;
 
 	void Start()
 	{
 		//Start the coroutine
 		StartCoroutine(Stopwatch());
 	}
-	//Coroutine Function counts up, and 
+	public void StartStopWatch()
+	{
+		scoreRoutine = StartCoroutine(Stopwatch());
+	}
 	IEnumerator Stopwatch()
 	{
 		while (true)
@@ -25,5 +29,23 @@ public class ScoreTracker : MonoBehaviour
 
 			yield return null;
 		}
+	}
+	public void DuckieDead()
+	{
+		//Stop the coroutine if a debris is touching the player
+		if (scoreRoutine != null)
+		{
+			StopCoroutine(scoreRoutine);
+		}
+		scoreTime = 0f;
+		timerText.text = "0";
+	}
+	public void RestartGame()
+	{
+		//Begin the coroutine again
+		scoreTime = 0f;
+		timerText.text = "0";
+
+		StartStopWatch();
 	}
 }
