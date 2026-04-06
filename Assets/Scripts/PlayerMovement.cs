@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Set speed variable of player's left and right movement speed, as well as Input value Vector2 variable
+    //Set speed variable of player's left and right movement speed, as well as Input Value Vector2 variable
 
     public float speed = 3;
     public Vector2 movementSpeed;
@@ -18,5 +19,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Use movementSpeed variable to move the player
         transform.position += (Vector3)movementSpeed * speed * Time.deltaTime;
+    }
+    //Create a UDf for the Player Input component to call in the Inspector
+    public void UponMovement(InputAction.CallbackContext context)
+    {
+        //Store the read Vector2 in Vector2 Input Value variable
+        movementSpeed = context.ReadValue<Vector2>();
     }
 }
