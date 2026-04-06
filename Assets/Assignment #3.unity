@@ -2034,6 +2034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 678819605}
+  - component: {fileID: 678819608}
   - component: {fileID: 678819607}
   - component: {fileID: 678819606}
   m_Layer: 5
@@ -2164,6 +2165,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678819604}
   m_CullTransparentMesh: 1
+--- !u!114 &678819608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678819604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da6d149edc57404d988588b7369386e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreTracker
+  timerText: {fileID: 678819606}
+  scoreTime: 0
 --- !u!1 &713684857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,7 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f81893a80889a948a83906906d539ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 3
+  speed: 5
   playerMovement: {x: 0, y: 0}
 --- !u!1 &1046523816
 GameObject:
