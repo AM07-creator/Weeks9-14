@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreTracker : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class ScoreTracker : MonoBehaviour
 	void Start()
 	{
 		//Start the coroutine
-		StartCoroutine(Stopwatch());
+		scoreRoutine = StartCoroutine(Stopwatch());
 	}
 	public void StartStopWatch()
 	{
@@ -47,5 +48,18 @@ public class ScoreTracker : MonoBehaviour
 		timerText.text = "0";
 
 		StartStopWatch();
+	}
+	public void ResetTimer()
+	{
+		// Stop the current coroutine if it's running
+		if (scoreRoutine != null)
+			StopCoroutine(scoreRoutine);
+
+		// Reset variables
+		scoreTime = 0f;
+		timerText.text = "0";
+
+		// Restart the coroutine
+		scoreRoutine = StartCoroutine(Stopwatch());
 	}
 }

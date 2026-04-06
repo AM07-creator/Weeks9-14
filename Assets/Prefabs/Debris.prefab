@@ -234,7 +234,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b82a7a55f5a9094192ac158d5ae520b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debris
+  player: {fileID: 0}
   speed: 15
+  onPlayerHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: dd80bcc169d7c5147bfd69ed428d3ec9, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2135115388744197449
 GameObject:
   m_ObjectHideFlags: 0

@@ -5235,8 +5235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17aa3b058a2db624d998da3dd2e3cd86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DebrisSpawner
-  spawnTime: 2
+  spawnTime: 0
   debrisPrefab: {fileID: 805017403174604445, guid: 260180010000c164cb2e3cb905ebc370, type: 3}
+  player: {fileID: 1041324600}
 --- !u!4 &1707092789
 Transform:
   m_ObjectHideFlags: 0

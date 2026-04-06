@@ -10,6 +10,7 @@ public class DebrisSpawner : MonoBehaviour
     float maxX = 8;
     float y = 6f;
     float fixedZ = 0f;
+    public GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehavior is created
     void Start()
@@ -33,6 +34,8 @@ public class DebrisSpawner : MonoBehaviour
             //Call the DebrisMover class and create a variable. The variable instantiates the debris prefab, and gets the speed variable from the DebrisMover script. Using the variable, the debris can now have a random falling speed range
 			DebrisMover d = Instantiate(debrisPrefab, spawnPosition, Quaternion.identity).GetComponent<DebrisMover>();
 			d.speed = Random.Range(10f, 20f);
+
+            d.player = player;
 		}
 	}
 }
