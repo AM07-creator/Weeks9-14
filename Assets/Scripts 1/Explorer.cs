@@ -5,7 +5,6 @@ public class Explorer : MonoBehaviour
 {
     public float health;
     public float speed;
-    public int treasure;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
