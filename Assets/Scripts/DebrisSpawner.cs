@@ -42,7 +42,6 @@ public class DebrisSpawner : MonoBehaviour
 
 			if (soundManager != null)
 			{
-				mover.onPlayerHit = new UnityEngine.Events.UnityEvent();
 				mover.onPlayerHit.AddListener(soundManager.PlayHitSound);
 			}
 		}
