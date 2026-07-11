@@ -20,9 +20,10 @@ public class FlyingArrows : MonoBehaviour
     {
         Vector3 directionToMove = Vector3.zero;
         directionToMove = new Vector3(0, 0, 0);
+
         //Move arrows overtime
         transform.position += directionToMove * speed * Time.deltaTime;
-        directionToMove.x += 1f;
+        directionToMove.x += 3f;
 
         if (player.bounds.Contains(transform.position) && !arrowsHitYou)
         {
