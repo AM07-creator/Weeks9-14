@@ -18,12 +18,11 @@ public class FlyingArrows : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 directionToMove = Vector3.zero;
-        directionToMove = new Vector3(0, 0, 0);
 
-        //Move arrows overtime
-        transform.position += directionToMove * speed * Time.deltaTime;
-        directionToMove.x += 3f;
+		//Move arrows overtime
+		Vector3 directionToMove = transform.position;
+        directionToMove.x += speed * Time.deltaTime;
+        transform.position = directionToMove;
 
         if (player.bounds.Contains(transform.position) && !arrowsHitYou)
         {
