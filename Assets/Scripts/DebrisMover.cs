@@ -31,7 +31,7 @@ public class DebrisMover : MonoBehaviour
                 Debug.Log("Debris hit player!");
 
 				// Call ScoreTracker
-				ScoreTracker scoreTracker = FindObjectOfType<ScoreTracker>();
+				ScoreTracker scoreTracker = GetComponent<ScoreTracker>();
 				if (scoreTracker != null)
 				{
 					scoreTracker.ResetTimer();
