@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //The vector 3 is multiplied by the speed variable and overtime to equal the game object's transform position
+        //The vector 2 is multiplied by the speed variable and overtime to equal the game object's transform position
         transform.position += (Vector3)movingDirection * speed * Time.deltaTime;
     }
     public void OnMove(InputAction.CallbackContext context)
