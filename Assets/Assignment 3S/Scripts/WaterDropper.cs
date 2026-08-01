@@ -29,16 +29,20 @@ public class WaterDropper : MonoBehaviour
 				hasHitPlayer = true;
 				Debug.Log("Water Collected!");
 
-				// Call Point Tracker Script
-				ScoreTracker scoreTracker = GetComponent<ScoreTracker>();
-				if (scoreTracker != null)
-				{
-					scoreTracker.ResetTimer();
-				}
+				//// Call Point Tracker Script
+				//ScoreTracker scoreTracker = GetComponent<ScoreTracker>();
+				//if (scoreTracker != null)
+				//{
+				//	scoreTracker.ResetTimer();
+				//}
 
-				// Destroy water on hit
+				// Set water to inactive in Unity
 				onPlayerHit.Invoke();
 			}
 		}
+	}
+	public void DestroyWater()
+	{
+		Destroy(gameObject);
 	}
 }

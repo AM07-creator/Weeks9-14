@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Cup
       objectReference: {fileID: 0}
+    - target: {fileID: 7911009883646180869, guid: 955ee17ce73588648b402a500566a4b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

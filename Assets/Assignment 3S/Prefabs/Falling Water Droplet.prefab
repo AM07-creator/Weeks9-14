@@ -51,10 +51,10 @@ MonoBehaviour:
   onPlayerHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7911009883646180869, guid: 955ee17ce73588648b402a500566a4b4, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4760950671920750466}
+        m_TargetAssemblyTypeName: WaterDropper, Assembly-CSharp
+        m_MethodName: DestroyWater
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
