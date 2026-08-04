@@ -413,6 +413,38 @@ MonoBehaviour:
   spawnTime: 0
   waterPrefab: {fileID: 1012859002276356242, guid: e12f6f0aeab4e284b9ad8cc1f7e8e4e3, type: 3}
   playerCup: {fileID: 160731959}
+  test: {fileID: 1845631603}
+--- !u!1 &1615573063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615573064}
+  m_Layer: 0
+  m_Name: fdghdkjfhg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1615573064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615573063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.53276, y: -4.48453, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845631599
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,3 +883,4 @@ SceneRoots:
   - {fileID: 1604629830}
   - {fileID: 63393498}
   - {fileID: 1918842047}
+  - {fileID: 1615573064}
