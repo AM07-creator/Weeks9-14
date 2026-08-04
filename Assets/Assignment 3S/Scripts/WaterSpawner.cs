@@ -19,7 +19,7 @@ public class WaterSpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//Creates a stopwatch that counts up to 3 seconds, then causes a droplet to instantiate and restart the stopwatch at 0
+		//Creates a stopwatch that counts up to 3 seconds, then causes a droplet to instantiate and restart its stopwatch at zero
 		spawnTime += Time.deltaTime;
 		if (spawnTime > 3)
 		{

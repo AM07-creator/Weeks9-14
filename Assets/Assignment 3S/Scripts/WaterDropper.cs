@@ -14,9 +14,19 @@ public class WaterDropper : MonoBehaviour
 		// Move droplet downward constantly
 		transform.position += Vector3.down * speed * Time.deltaTime;
 
+		// Call Point Tracker Script to restart the game if a water droplet hits the bottom screen edge
+		PointTracker waterDropped = GetComponent<PointTracker>();
+
 		// Destroy off-screen
 		if (transform.position.y < -8f)
-			Destroy(gameObject);
+		{
+			DestroyWater();
+			Debug.Log("Water Missed! Game Over");
+			waterDropped.GameOver();
+		}
+
+		// Call Point Tracker Script to add to the score if a droplet touches the player cup
+		PointTracker pointTracker = GetComponent<PointTracker>();
 
 		// Detect horizontal alignment with player
 		if (playerCup != null && !hasHitPlayer)
@@ -28,13 +38,7 @@ public class WaterDropper : MonoBehaviour
 			{
 				hasHitPlayer = true;
 				Debug.Log("Water Collected!");
-
-				//// Call Point Tracker Script
-				//ScoreTracker scoreTracker = GetComponent<ScoreTracker>();
-				//if (scoreTracker != null)
-				//{
-				//	scoreTracker.ResetTimer();
-				//}
+				pointTracker.AddToScore();
 
 				// Set water to inactive in Unity
 				onPlayerHit.Invoke();
