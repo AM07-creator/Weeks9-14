@@ -1,0 +1,29 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class CartMovement : MonoBehaviour
+{
+	//Set speed variable of player's left and right movement speed, as well as Input Value Vector2 variable
+
+	public float speed = 10;
+	public Vector2 playerMovement;
+
+	// Start is called once before the first execution of Update after the MonoBehaviour is created
+	void Start()
+	{
+
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		//Use movementSpeed variable to move the player
+		transform.position += (Vector3)playerMovement * speed * Time.deltaTime;
+	}
+	//Create a UDf for the Player Input component to call in the Inspector
+	public void UponMovement(InputAction.CallbackContext context)
+	{
+		//Store the read Vector2 in Vector2 Input Value variable
+		playerMovement = context.ReadValue<Vector2>();
+	}
+}
